@@ -22,21 +22,15 @@
  * the view is modified.
  */
  
-
- 
  $plz = array();
  
- foreach($row->field_field_plz_sperre as $plzout){
+foreach($row->field_field_plz_sperre as $plzout){
     $plz[] = '<span class="label label-default">' . $plzout['rendered']['#markup']  .'</span>';
- }
+}
                  
  if(count($plz) > 3){
    $copy = $plz;
-   
    $plz = array($copy[0], $copy[1], $copy[2], '<span class="label label-info">+'. (count($copy) - 3) .'</span>');
- 
  }
-   
- 
 ?>
 <?php print implode($plz, " "); ?>
