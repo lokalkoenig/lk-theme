@@ -1,0 +1,42 @@
+name = Lokalkoenig Bootstrap Sub-theme
+description = A Bootstrap Sub-theme.
+core = 7.x
+base theme = bootstrap
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+regions[top]       = Header Top
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[content]        = 'Content'
+regions[content_bottom] = 'Content Bottom'
+
+regions[sidebar_first]  = 'Primary'
+regions[search_top]       = 'Search top'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+regions[bottom]         = Page bottom
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = dist/lk.css
+scripts[] = 'dist/javascript.js'
+
+; For information on choosing the desired method, please read the Drupal
+; Bootstrap sub-theme "how-to" documentation:
+; https://drupal.org/node/1978010
+
+; ;----------------------------------
+; ; METHOD 1: Bootstrap Source Files
+; ;----------------------------------
+; 
+; ;;;;;;;;;;;;;;;;;;;;;
+; ;; Scripts
+; ;;;;;;;;;;;;;;;;;;;;;
+
+; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
+settings[bootstrap_cdn] = ''
+

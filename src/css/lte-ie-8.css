@@ -1,0 +1,22 @@
+/** CSS for IE 8 */
+
+.region.region-header {
+  background-image: url(../design/front_bg.jpg);
+  background-color: #014783;
+  background-position: center center;
+}
+
+
+#block-lokalkoenig-lokalkoenig-title H2 {
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+.preview_container .image-preview col-md-8 {
+  width: 80%;
+  float: left;
+}
+.preview_container .col-md-4 {
+  width: 20%;
+  float: left;
+}
