@@ -10,11 +10,14 @@ var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var strip = require('gulp-strip-comments');
 
+const sass = require('gulp-ruby-sass');
+
 gulp.task('css', function () {
   return gulp.src([
                   'src/css/style.css', 
                   'node_modules/bootstrap-multiselect/dist/css/bootstrap-multiselect.css', 
-                  "node_modules/bootstrap-select/dist/css/bootstrap-select.css"
+                  "node_modules/bootstrap-select/dist/css/bootstrap-select.css",
+                  'src/css/lk.css'
                 ])
     .pipe(concatCss("lk.css"))
     .pipe(cleanCSS({compatibility: 'ie8', keepBreaks: true, 'target': "out/"}))
@@ -35,6 +38,14 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('build', ['scripts', 'css'], function() {
+gulp.task('sass', () =>
+    sass('src/sass/lk.scss')
+        .on('error', sass.logError)
+        .pipe(gulp.dest('src/css/'))
+);
+
+
+
+gulp.task('build', ['scripts', 'sass', 'css'], function() {
   
 });

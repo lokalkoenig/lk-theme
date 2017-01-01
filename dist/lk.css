@@ -410,3 +410,5 @@ span.k-desc{max-width:79px}
 .bs-searchbox+.bs-actionsbox{padding:0 8px 4px}
 .bs-searchbox input.form-control{margin-bottom:0;width:100%}
 .mobile-device{position:absolute;top:0;left:0;display:block!important;width:100%;height:100%!important;opacity:0}
+body.page-download{background:#34495e}
+body.page-download #page #main{float:none;width:600px;margin:50px auto}
