@@ -41,7 +41,7 @@ if(lk_is_moderator()){
 <?php
   if(lk_is_moderator()){
     ?>
-    <div class="well">Die Kampagne ist noch nicht freigeschalten. Bitte überprüfen Sie diese und schalten Sie diese danach Online (<?php print l('Moderation', 'node/' . $node -> nid . '/admin'); ?>).</div>
+    <div class="well well-white">Die Kampagne ist noch nicht freigeschalten. Bitte überprüfen Sie diese und schalten Sie diese danach Online (<?php print l('Moderation', 'node/' . $node -> nid . '/admin'); ?>).</div>
   
     <?php
   }
@@ -49,6 +49,7 @@ if(lk_is_moderator()){
 
 <?php if($node -> lkstatus != 'deleted' AND lk_is_moderator()) { ?>
 <h3 class="list-group-item-heading">Vorschau Übersicht</h3>
+
 <hr />
 <?php 
 
@@ -64,6 +65,7 @@ print drupal_render($view_node); ?>
 <hr />
 
 <iframe style="width: 100%; height: 400px; border: 1px Black solid; background: #EEE;" src="<?php print url('node/' . $node -> nid . '/pdf'); ?>">PDF wird erstellt...</iframe>
+
 
 
 <?php } ?>
