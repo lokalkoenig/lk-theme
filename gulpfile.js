@@ -46,6 +46,6 @@ gulp.task('sass', () =>
 
 
 
-gulp.task('build', ['scripts', 'sass', 'css'], function() {
+gulp.task('build', [ 'sass', 'scripts','css'], function() {
   
 });

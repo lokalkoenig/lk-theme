@@ -12,3 +12,61 @@ body.page-download {
   }
 }
 
+
+.link-group {
+    display: inline-block;
+    position: relative;
+    background:transparent;
+    transition: min-width 200ms linear;
+    min-width: 150px;
+    z-index: 1;
+    
+   .items {
+      height: 1px;
+      border-top: 1px transparent solid;
+      opacity: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      overflow: hidden;
+      transition: opacity 400ms linear;
+      top: 27px;
+      z-index: 2;
+      
+      .btn {
+        border: 0;
+        text-align: left;
+        padding: 5px 10px;
+      }
+      
+   }
+  
+  &:hover {
+    min-width: 200px;
+    z-index: 3;
+    
+    >.btn {
+      background-color: #428bca;
+      color: White;
+    }
+    
+    .items {
+      height: auto;
+      opacity: 1;
+      background: White;
+      border: 1px silver solid;
+      border-top: 0;
+    }    
+  }
+}
+   
+
+.well {
+  &.well-white {
+   background: white;
+  }
+  
+  >h4 {
+    margin-top: 0;
+  }  
+}

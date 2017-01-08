@@ -41,11 +41,13 @@
   <h4 style="margin-top: 0;"><?php print $title; ?></h4>
   
   <div class="nachrichten-text">
+    
+    <div class="clearfix">
+      <?php print render($content["field_text"]); ?>
+      <hr />
+    </div>
+    
     <?php 
-        print render($content["field_text"]); 
-        
-        print '<hr />';
-        
         print render($content['kampagnen_search']);
         print render($content["field_dateien"]); 
     ?>

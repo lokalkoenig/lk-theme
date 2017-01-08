@@ -10,12 +10,6 @@
 
 body {
   position: inherit;
-
-}
-
-
-.well.well-white {
-  background: white;
 }
 
 .glyphicon-big {
@@ -373,13 +367,6 @@ input[type="file"] {
 .tabledrag-changed-warning {
   color: #d43f3a;
 }
-
-/**
-input.form-control {
-  width: 450px;
-  display: inline-block;
-  margin-right: 20px;
-}  */
 
 .field-name-field-medium-source input.btn-danger {
   margin-left: 10px;
@@ -800,20 +787,6 @@ input.add-to-dropbox  {
     box-shadow: 1px 1px 2px Silver;
     cursor: default;
 
-}
-
-
-.btn-default /**, .btn.form-submit*/ {
-  background: #95a8af;
-  box-shadow: 1px 1px 2px Silver;
-  border: 0;
-  color: WHite;
-}
-
-button.btn-default {
-  background: WHite;
-  color: Black;
-  box-shadow: 1px 1px 2px Black;
 }
 
 

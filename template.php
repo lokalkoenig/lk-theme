@@ -49,14 +49,12 @@ function bootstrap_lk_file_widget($variables){
   $output = '';
   $hidden_elements = array();
   foreach (element_children($element) as $child) {
-    if ($element[$child]['#type'] === 'hidden') {
+    if (isset($element[$child]['#type']) && $element[$child]['#type'] === 'hidden') {
       $hidden_elements[$child] = $element[$child];
       unset($element[$child]);
     }
   }
-  //$element['upload_button']['#prefix'] = '<span class="input-group-btn">';
-  //$element['upload_button']['#suffix'] = '</span>';
-  // The "form-managed-file" class is required for proper Ajax functionality.
+  
   $output .= '<div class="file-widget form-managed-file clearfix">';
   if (!empty($element['fid']['#value'])) {
     // Add the file size after the file name.
