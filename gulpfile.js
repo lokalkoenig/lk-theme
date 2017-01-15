@@ -9,6 +9,7 @@ var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css'); 
 var concat = require('gulp-concat');
 var strip = require('gulp-strip-comments');
+var sassUnicode = require('gulp-sass-unicode');
 
 const sass = require('gulp-ruby-sass');
 
@@ -19,7 +20,8 @@ gulp.task('css', function () {
                   'src/css/lk.css'
                 ])
     .pipe(concatCss("lk.css"))
-    .pipe(cleanCSS({compatibility: 'ie8', keepBreaks: true, 'target': "out/"}))
+    .pipe(sassUnicode())
+    //.pipe(cleanCSS({compatibility: 'ie8', keepBreaks: true, 'target': "out/", 'rebase': true}))
     .pipe(gulp.dest('./dist/'));
 });
 
@@ -39,6 +41,7 @@ gulp.task('scripts', function() {
 
 gulp.task('sass', () =>
     sass('src/sass/lk.scss')
+        .pipe(sassUnicode())
         .on('error', sass.logError)
         .pipe(gulp.dest('src/css/'))
 );
