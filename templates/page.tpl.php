@@ -41,6 +41,7 @@ global $user;
     <div id="main" >
       <div id="content" class="column" role="main">
         <a id="main-content"></a>
+         <?php print render($page['search_top']); ?>
         <?php print render($page['content']); ?>
       </div>
     </div>

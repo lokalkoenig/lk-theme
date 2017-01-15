@@ -19,7 +19,6 @@ function bootstrap_lk_preprocess_html(&$vars) {
   }
 }
 
-
 function bootstrap_lk_link($variables){
    
     if($variables["path"] == "node/99" AND !user_is_logged_in()){
@@ -34,11 +33,7 @@ function bootstrap_lk_link($variables){
     
     if(in_array($variables['text'], array("Bearbeiten"))){
        $variables['options']['attributes']["class"][] = 'btn btn-sm btn-primary';
-    
     }
-    
-    
-  
 
    return '<a href="' . check_plain(url($variables['path'], $variables['options'])) . '"' . drupal_attributes($variables['options']['attributes']) . '>' . ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</a>';
 }
@@ -154,13 +149,9 @@ function bootstrap_lk_form($variables){
   if($element["#id"] == "user-login-form" 
       OR $element['#id'] == 'views-exposed-form-suchev2-page' 
       OR  $element['#id'] == 'views-exposed-form-suchev2-page-2' 
-      
       ){
      return '<form' . drupal_attributes($element['#attributes']) . '>' . $element['#children'] . '</form>'; 
   }
-  
-  //
-  
   
   $element['#attributes']["class"][] = 'panel panel-default'; 
   // Anonymous DIV to satisfy XHTML compliance.
@@ -196,8 +187,6 @@ function bootstrap_lk_preprocess_node(&$variables){
   $node = $variables['node'];
   _lk_check_node_kampagne($variables, $node);
 }
-
-
 
 
 /**
@@ -339,9 +328,3 @@ function bootstrap_lk_facetapi_link_active($variables) {
   //dpm($variables);         
   return theme_link($variables);
 }
-
-
-/** OUT-Dated */
-function lk_get_username_and_role($user){ }
-function ____bootstrap_lk_field__taxonomy_term_reference($variables) { }
-

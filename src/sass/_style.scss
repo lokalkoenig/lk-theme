@@ -5,8 +5,7 @@
  */   
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic);
-@import "addkampagne.css";
-@import "static.css";
+
 
 body {
   position: inherit;
@@ -29,6 +28,10 @@ table.table {
   font-size: 50px;
   float: left;
   margin: -0.05em .5em 0 0;
+}
+
+.g-recaptcha {
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -122,10 +125,6 @@ body {
   color: black;
 }
 
-
-
-
-
 body {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
@@ -200,14 +199,14 @@ a.tabs-primary__tab-link.is-active {
   width: 100.01%;
 }
 
-.bg_1 { background-image: url(../headerbg/bg_1.jpg); }
-.bg_2 { background-image: url(../headerbg/bg_2.jpg); }
-.bg_3 { background-image: url(../headerbg/bg_3.jpg); }
-.bg_4 { background-image: url(../headerbg/bg_4.jpg); }
-.bg_5 { background-image: url(../headerbg/bg_5.jpg); }
-.bg_6 { background-image: url(../headerbg/bg_6.jpg); }
-.bg_7 { background-image: url(../headerbg/bg_7.jpg); }
-.bg_8 { background-image: url(../headerbg/bg_8.jpg); }
+.bg_1 { background-image: url(#{$theme-folder}/headerbg/bg_1.jpg); }
+.bg_2 { background-image: url(#{$theme-folder}/headerbg/bg_2.jpg); }
+.bg_3 { background-image: url(#{$theme-folder}/headerbg/bg_3.jpg); }
+.bg_4 { background-image: url(#{$theme-folder}/headerbg/bg_4.jpg); }
+.bg_5 { background-image: url(#{$theme-folder}/headerbg/bg_5.jpg); }
+.bg_6 { background-image: url(#{$theme-folder}/headerbg/bg_6.jpg); }
+.bg_7 { background-image: url(#{$theme-folder}/headerbg/bg_7.jpg); }
+.bg_8 { background-image: url(#{$theme-folder}/headerbg/bg_8.jpg); }
 
 .region-header a {
   color: White;
@@ -711,26 +710,26 @@ input.add-to-dropbox  {
 }
 
 #block-block-2 a.facebook {
-  background-image: url(../design/social/facebook.jpg);
+  background-image: url(#{$theme-folder}/design/social/facebook.jpg);
 }
 
 #block-block-2 a.facebook:hover {
-  background-image: url(../design/social/facebook_active.jpg);
+  background-image: url(#{$theme-folder}/design/social/facebook_active.jpg);
 }
 
 #block-block-2 a.pinterest {
-  background-image: url(../design/social/pinterest.jpg);
+  background-image: url(#{$theme-folder}/design/social/pinterest.jpg);
 }
 
 #block-block-2 a.pinterest:hover {
-  background-image: url(../design/social/pinterest_active.jpg);
+  background-image: url(#{$theme-folder}/design/social/pinterest_active.jpg);
 }
 #block-block-2 a.twitter {
-  background-image: url(../design/social/twitter.jpg);
+  background-image: url(#{$theme-folder}/design/social/twitter.jpg);
 }
 
 #block-block-2 a.twitter:hover {
-  background-image: url(../design/social/twitter_active.jpg);
+  background-image: url(#{$theme-folder}/design/social/twitter_active.jpg);
 }
 
 
@@ -746,7 +745,7 @@ input.add-to-dropbox  {
   color: White !important;
   padding-right: 40px;
   font-size: 1.2em;
-  background-image: url(../design/btn-yellow-white-arrow.png);
+  background-image: url(#{$theme-folder}/design/btn-yellow-white-arrow.png);
   background-repeat: no-repeat;
   background-position: right center;
   transition: background-color 0.2s;
@@ -811,7 +810,7 @@ input.add-to-dropbox  {
 }
 
 .front #wrap {
-  background: url(../design/front_bg.jpg);
+  background: url(#{$theme-folder}/design/front_bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #014783;
@@ -829,7 +828,7 @@ input.add-to-dropbox  {
 }
 
 .extra-box {
-  background: url(../design/start-extra-box.jpg);
+  background: url(#{$theme-folder}/design/start-extra-box.jpg);
   background-repeat: no-repeat;
   padding-top: 35px;
   padding-bottom: 45px; 
@@ -1179,26 +1178,6 @@ div.view-lk-log .view-content .item-list {
 div.view-lk-log h3 {
   font-size: 15px;
 }
-
-
-/**
-.page-suche .region-content {
-  border-left: 0px #d7dcde solid;
-}
-
-.page-suche .region-sidebar-first {
-  border-right: 2px #d7dcde solid;
-  border-bottom: 2px #d7dcde solid;
-}
-
-.well.lk_search_text {
-  border-right: 0;
-}
-
-.search_tabs ul li:first-child {
-
-}
-*/
 
 #lk-form-purchase-licences .form-checkboxes label {
   display: block;

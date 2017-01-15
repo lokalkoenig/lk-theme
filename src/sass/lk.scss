@@ -1,4 +1,10 @@
 
+$theme-folder: '/sites/all/themes/bootstrap_lk';
+
+@import "modules/_search.scss";
+@import "_addkampagne.scss";
+@import "_static.scss";
+@import "_style.scss";
 
 // Download-Page
 body.page-download {

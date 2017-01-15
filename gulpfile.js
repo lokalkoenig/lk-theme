@@ -14,7 +14,6 @@ const sass = require('gulp-ruby-sass');
 
 gulp.task('css', function () {
   return gulp.src([
-                  'src/css/style.css', 
                   'node_modules/bootstrap-multiselect/dist/css/bootstrap-multiselect.css', 
                   "node_modules/bootstrap-select/dist/css/bootstrap-select.css",
                   'src/css/lk.css'
