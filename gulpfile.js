@@ -10,6 +10,7 @@ var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var strip = require('gulp-strip-comments');
 var sassUnicode = require('gulp-sass-unicode');
+var watch = require('gulp-watch');
 
 const sass = require('gulp-ruby-sass');
 
@@ -51,3 +52,10 @@ gulp.task('sass', () =>
 gulp.task('build', [ 'sass', 'scripts','css'], function() {
   
 });
+
+gulp.task('default', function() {
+  gulp.watch('src/sass/*.scss', ['sass', 'scripts', 'css']);
+  gulp.watch('src/css/*.css', ['css']);
+
+});
+
