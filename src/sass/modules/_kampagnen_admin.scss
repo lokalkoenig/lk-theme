@@ -77,17 +77,6 @@ div.addressfield-container-inline > div.form-item {
   overflow: inherit;
   z-index: 1000;
 
-  &::before {
-    position: absolute;
-    content: 'Suchvorschl\00e4ge';
-    background: #eee;
-    color: #000;
-    margin-left: 153px;
-    z-index: 300;
-    margin-top: -40px;
-    padding: 7px;
-  }
-
   li {
     padding: 3px 6px;
     font-size: inherit;

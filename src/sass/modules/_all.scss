@@ -377,10 +377,6 @@ input.add-to-dropbox {
   background: $blue;
 }
 
-.thumbnail-noborder {
-  border: 1px solid #3e5266;
-}
-
 .status-icons {
   font-size: 22px;
   margin-bottom: 10px;
@@ -565,7 +561,6 @@ a.stickynode.on {
   margin-left: 30px;
 }
 
-
 .contenthover {
   padding: 20px 20px 10px;
 
@@ -675,13 +670,15 @@ a.stickynode.on {
 
 
 
-ul li.list_merkliste {
+li.list_merkliste {
   padding-left: 0;
   padding-right: 15px;
 
-  &:hover a,
-  &.hover a {
-    color: #5cb85c;
+  &:hover,
+  &.hover {
+    a {
+      color: #5cb85c;
+    }
 
     .badge {
       background: #5cb85c;
@@ -689,9 +686,11 @@ ul li.list_merkliste {
   }
 }
 
-.list_vku:hover a,
- .list_vku.hover a {
-  color: #f7a800;
+.list_vku:hover,
+ .list_vku.hover {
+  a {
+    color: #f7a800;
+  }
 
   .badge {
     background: #f7a800;

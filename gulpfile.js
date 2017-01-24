@@ -79,7 +79,7 @@ gulp.task('sass', () =>
 
 gulp.task('watch', function() {
   gulp.watch('src/js/*.js', ['scripts']);
-  gulp.watch(['src/sass/*.scss', 'src/sass/*/*.scss'], ['scss-lint', 'sass', 'css']);
+  gulp.watch(['src/sass/*.scss', 'src/sass/*/*.scss'], ['scss-lint', 'sass', 'css', 'css']);
 });
 
 

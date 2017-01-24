@@ -2,98 +2,92 @@
 /// LK - Theme JS
 ///
 
+$ = jQuery;
 
+function closeSearchHelp(){
+  $('.showtext').hide(500, 'swing');
+  $( "#searchbegin" ).removeClass('open').animate({ width: "150px"}, 300);
+}
 
+function lk_add_js_notfication(msg, scrollto){
+  var msg_html = '<div class="width alert js-alert alert-success fade in" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>' + msg +'</div>';
+  $('.js-alert').remove();
+  $(msg_html).insertBefore("#block-system-main>div:first");
 
-(function($) {
+  //
+  if(!scrollto) {
+    $.scrollTo('.alert', 500);
+  }
+  else {
+    $.scrollTo(scrollto, 500);
+  }
+}
 
-  function closeSearchHelp(){
-    $('.showtext').hide(500, 'swing');
-    $( "#searchbegin" ).removeClass('open').animate({ width: "150px"}, 300);
+function lk_add_js_modal_optin(title, content, link, link_title){
+  $('#dynamicmodal').remove();
+  $('.modal-backdrop').remove();
+  var modal = '<div class="modal fade" id="dynamicmodal" style="display: none;"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4 class="modal-title">Modal title</h4></div><div class="modal-body clearfix"><p>One fine body&hellip;</p></div></div><!-- /.modal-content --></div><!-- /.modal-dialog --></div><!-- /.modal -->';
+
+  $(modal).insertAfter("#wrap");
+  if(link_title !== ''){
+    content += '<p style="padding-top: 10px;"><a href="'+ link +'" class="btn btn-danger">' + link_title + '</a></p>';
+  }
+  $('#dynamicmodal .modal-title').html(title);
+  $('#dynamicmodal .modal-body p').html(content);
+  $('#dynamicmodal').modal('show');
+}
+
+function sendRecomondation(){
+  var mas = $( "#recomendform .selectpicker" ).val();
+
+  if(mas === null){
+    $('.alert-email').html("Bitte wählen Sie einen Mitarbeiter aus.").toggle('slow');
+    return false;
   }
 
-  function lk_add_js_notfication(msg, scrollto){
-    var msg_html = '<div class="width alert js-alert alert-success fade in" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>' + msg +'</div>';
-    $('.js-alert').remove();
-    $(msg_html).insertBefore("#block-system-main>div:first");
+  $('recomendform .selectpicker').selectpicker('refresh');
+  var values = $( "#recomendform :input" ).serialize();
 
-    //
-    if(!scrollto) {
-      $.scrollTo('.alert', 500);
+  $.ajax({
+    type: "POST",
+    url: "/msg/send",
+    data: values
+  })
+  .done(function( msg ) {
+    if(msg.error === 1){
+       $('.alert-email').html(msg.msg).show();
     }
     else {
-      $.scrollTo(scrollto, 500);
+       $('#recomendform').html('<div class="alert alert-success">' + msg.msg + '</div>');
+
+       setTimeout(function() {
+          $('#dynamicmodal button.close').click();
+        }, 2000);
     }
-  }
+  });
 
-  function lk_add_js_modal_optin(title, content, link, link_title){
-    $('#dynamicmodal').remove();
-    $('.modal-backdrop').remove();
-    var modal = '<div class="modal fade" id="dynamicmodal" style="display: none;"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4 class="modal-title">Modal title</h4></div><div class="modal-body clearfix"><p>One fine body&hellip;</p></div></div><!-- /.modal-content --></div><!-- /.modal-dialog --></div><!-- /.modal -->';
+return false;
+}
 
-    $(modal).insertAfter("#wrap");
-    if(link_title !== ''){
-      content += '<p style="padding-top: 10px;"><a href="'+ link +'" class="btn btn-danger">' + link_title + '</a></p>';
+function activetePreview(id, fileid){
+
+  var here = $(window).height() - 20;
+  $('.preview_container').css('height', here);
+  $('.tab-inner').css('height', here - 98);
+  $('.previews').hide();
+  $('.preview_item .more').hide();
+  $('.previews#pres_medium_' + id).show();
+  $('.preview_link>.preview_item').removeClass('active');
+  $('#pres_medium_item_' + id).addClass('active');
+
+  $('#pres_medium_item_' + id + ' .more').show(400, function(){
+    if(fileid){
+       $('#tabs_'+ id +' a[href="#file_'+ fileid +'"]').tab('show')
     }
-    $('#dynamicmodal .modal-title').html(title);
-    $('#dynamicmodal .modal-body p').html(content);
-    $('#dynamicmodal').modal('show');
-  }
-
-  function sendRecomondation(){
-    var mas = $( "#recomendform .selectpicker" ).val();
-
-    if(mas === null){
-      $('.alert-email').html("Bitte wählen Sie einen Mitarbeiter aus.").toggle('slow');
-      return false;
-    }
-
-    $('recomendform .selectpicker').selectpicker('refresh');
-    var values = $( "#recomendform :input" ).serialize();
-
-    $.ajax({
-      type: "POST",
-      url: "/msg/send",
-      data: values
-    })
-    .done(function( msg ) {
-      if(msg.error === 1){
-         $('.alert-email').html(msg.msg).show();
-      }
-      else {
-         $('#recomendform').html('<div class="alert alert-success">' + msg.msg + '</div>');
-
-         setTimeout(function() {
-            $('#dynamicmodal button.close').click();
-          }, 2000);
-      }
-    });
-
-  return false;
-  }
-
-  function activetePreview(id, fileid){
-
-    var here = $(window).height() - 20;
-    $('.preview_container').css('height', here);
-    $('.tab-inner').css('height', here - 98);
-    $('.previews').hide();
-    $('.preview_item .more').hide();
-    $('.previews#pres_medium_' + id).show();
-    $('.preview_link>.preview_item').removeClass('active');
-    $('#pres_medium_item_' + id).addClass('active');
-
-    $('#pres_medium_item_' + id + ' .more').show(400, function(){
-      if(fileid){
-         $('#tabs_'+ id +' a[href="#file_'+ fileid +'"]').tab('show')
-      }
-    });
-  }
-
-})( jQuery );
+  });
+}
 
 (function($) {
-
   $(document).ready(function(){
 
     // Search-Bar
