@@ -1,0 +1,871 @@
+.glyphicon-big {
+  font-size: 2.5em;
+}
+
+.page-user .tabs--secondary {
+  display: none;
+}
+
+table.table {
+  margin-bottom: 0;
+}
+
+.g-recaptcha {
+  margin-bottom: 20px;
+}
+
+.form-required {
+  color: #d9534f;
+}
+
+.panel h2,
+.panel h3 {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.view-empty {
+  text-align: center;
+}
+
+ul.action-links {
+  margin: 0;
+}
+
+.bs-callout {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #eee;
+  background-color: #eee;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.bs-callout-danger {
+  background-color: #fdf7f7;
+  border-color: #d9534f;
+}
+
+#wrap2 {
+  background: White;
+  min-width: 1000px;
+}
+
+#wrap {
+  padding-bottom: 40px;
+}
+
+#page,
+.width {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#page #main {
+  width: 75%;
+  float: left;
+}
+
+.no-sidebars #page #main {
+  width: 100%;
+  float: none;
+}
+
+.page-suche .sidebars,
+.page-suche-grid .sidebars,
+.page-messages .sidebars,
+.page-merkliste .sidebars,
+.sidebars {
+  width: 25%;
+  float: left;
+}
+
+.sidebars .col-md-3 {
+  width: auto;
+}
+
+.region-highlighted {
+  background: #ecf0f1;
+
+  p {
+    margin: 0;
+  }
+}
+
+a.ablock * {
+  color: #3e5266;
+
+  &:hover {
+    color: #2a6496;
+    border-color: #2a6496;
+  }
+}
+
+.inner_section {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+
+.panel-body .alert {
+  width: auto;
+  margin: 10px 0;
+}
+
+a#edit-cancel {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.alert {
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  h2,
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.region-top {
+  float: right;
+
+  #user-login-form .form-item,
+  #user-login-form .form-actions {
+    float: left;
+    padding-left: 10px;
+    margin: 0;
+    margin-top: 10px;
+
+    label {
+      display: none;
+    }
+  }
+}
+
+.region-footer {
+  background: #eaecef;
+
+  .block {
+    margin: 0 auto;
+    width: 1000px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.region-bottom {
+  background: $blue;
+
+  .block {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+#block-system-main {
+  form {
+    margin-bottom: 20px;
+  }
+
+  .well form {
+    margin-bottom: 0;
+  }
+}
+
+.form-type-select .btn-group {
+  margin-left: 10px;
+}
+
+a.tabledrag-handle .handle {
+  padding: .42em .6em;
+}
+
+.form-managed-file .image-widget-data,
+.form-type-managed-file .image-widget-data {
+  float: none;
+}
+
+input[type="file"] {
+  margin-bottom: .5em;
+}
+
+.tabledrag-changed-warning {
+  color: #d43f3a;
+}
+
+.field-name-field-medium-source input.btn-danger {
+  margin-left: 10px;
+}
+
+.file-upload-js-error {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.form-type-textfield label {
+  width: 200px;
+  display: inline-block;
+}
+
+.ajax-progress-bar {
+  width: 100%;
+  margin-top: 20px;
+  float: none;
+  clear: both;
+}
+
+.form-actions .btn {
+  margin-right: 10px;
+}
+
+#user-login-form .form-submit {
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#block-lokalkoenig-user-lk-user-block-agentur {
+  margin-top: 10px;
+
+  button {
+    margin-right: 0;
+  }
+
+  .welcome {
+    font-size: 1.3em;
+    margin-right: 1.5em;
+    color: #fff;
+    font-weight: normal;
+
+    span {
+      font-weight: bold;
+      color: #f7a800;
+    }
+  }
+}
+
+.modal header h2 {
+  margin-top: 0;
+}
+
+.node-teaser .list-inline {
+  margin-top: 20px;
+}
+
+.view-intern-kampagnen-medien .item-list>ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.thumbnail {
+  border: 1px solid #3e5266;
+}
+
+.field-type-taxonomy-term-reference label {
+  width: 200px;
+}
+
+label#edit-field-kamp-preis-und-0-value {
+  width: 212px;
+  float: left;
+}
+
+.field-name-field-sid {
+  display: none;
+}
+
+.page-suche .region-content,
+.page-suche-grid .region-content,
+.page-merkliste #content {
+  border-left: 2px #d7dcde solid;
+  padding-left: 15px;
+  padding-top: 15px;
+  min-height: 400px;
+}
+
+.no-sidebars.page-suche .region-content,
+.no-sidebars.page-suche-grid .region-content,
+.no-sidebars.page-merkliste #content {
+  border-left: 0;
+  min-height: none;
+}
+
+.no-sidebars.page-merkliste #content {
+  border-left: 0;
+}
+
+.field-widget-image-image .btn-danger.form-submit {
+  display: block;
+  margin-top: 10px;
+}
+
+.counter {
+  font-size: .9em;
+  padding: 4px 0;
+}
+
+.file-icon {
+  width: 30px;
+}
+
+// Node editieren CSS
+input.add-to-dropbox {
+  margin-left: 10px !important;
+}
+
+.hierarchical-select-wrapper {
+  .hierarchical-select .selects {
+    float: left;
+    width: 50%;
+  }
+
+  .dropbox {
+    display: block;
+    padding: 1em;
+    border: 1px #c0c0c0 solid;
+    margin-top: 10px;
+
+    table {
+      width: 100%;
+
+      td {
+        padding: .5em;
+      }
+    }
+  }
+}
+
+.dropbox-title {
+  font-weight: bold;
+}
+
+.dropbox-entry.odd {
+  background-color: #f5f5f5;
+}
+
+.panel-default > .panel-heading {
+  color: inherit;
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.panel-title {
+  border-bottom: 2px #428bca solid;
+  display: inline-block;
+}
+
+.privatemsg-message-column .panel-title {
+  display: block;
+  border-bottom: 0;
+}
+
+// Kampagnen-Ansicht
+.strip-navigation {
+  height: 100%;
+  background: $blue;
+}
+
+.thumbnail-noborder {
+  border: 1px solid #3e5266;
+}
+
+.status-icons {
+  font-size: 22px;
+  margin-bottom: 10px;
+
+  img {
+    margin-right: 5px;
+    display: inline-block;
+  }
+
+  li {
+    margin-right: 20px;
+  }
+}
+
+.presentation_grey {
+  background-color: #ecf0f1;
+}
+
+.varianten-title {
+  background: $blue;
+  color: #fff;
+  padding: 6px;
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.orange {
+  color: #f5a804;
+}
+
+.grey {
+  color: #9f9f9f;
+}
+
+.kampagnen_medien {
+  margin-left: 30px;
+
+  table th {
+    font-size: .95em;
+  }
+}
+
+#block-lokalkoenig-user-lk-user-block-left {
+  margin-right: 20px;
+}
+
+#privatemsg-list .panel-body {
+  min-height: 400px;
+}
+
+.well.lk_search_text {
+  display: none;
+}
+
+.view-suchev2 div.view-content,
+.view-suchev2 div.view-empty {
+  padding-top: 10px;
+}
+
+.view-last-viewed {
+  td.views-field-php {
+    width: 750px;
+    padding-top: 20px;
+
+    hr {
+      display: none;
+    }
+  }
+
+  caption {
+    text-align: left;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.1em;
+    padding-bottom: 10px;
+    border-bottom: 1px #2c3e50 solid;
+  }
+}
+
+td.views-field-lastviewed-time-1 {
+  text-align: center;
+  vertical-align: center;
+}
+
+// Merkliste Suche
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  background: #add8e6;
+  border-radius: 0;
+}
+
+.view-suchev2 .view-footer {
+  clear: both;
+}
+
+.prodid {
+  display: inline-block;
+  color: #fff;
+  background: $blue;
+  padding: 1px 5px;
+  border-radius: 0;
+  font-size: 10px;
+  border: 1px #c0c0c0 solid;
+}
+
+a.stickynode:hover,
+a.stickynode.on {
+  color: #f7a800;
+}
+
+.prodid_big {
+  font-size: 17px;
+  padding: 5px;
+}
+
+#vkuload {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background: url('/sites/all/modules/lokalkoenig/ajax-loader.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 105;
+  background-color: #fff;
+  border: 1px #c0c0c0 solid;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+#privatemsg-list-form select {
+  display: inline;
+  width: 200px;
+}
+
+.lk_search_text .views-widget-filter-sticky,
+.lk_search_text .views-widget-sort-by {
+  display: none;
+}
+
+#lk-form-purchase-licences .form-checkboxes label {
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+#lk-form-purchase-licences .form-checkboxes input[type=checkbox] {
+  display: inline-block;
+  margin-top: 120px;
+}
+
+#lk-form-purchase-licences .form-checkboxes label:hover,
+#lk-form-purchase-licences .form-checkboxes label.checked {
+  background: rgb(245, 245, 245);
+}
+
+#lk-form-purchase-licences .form-checkboxes .glyphicon {
+  position: absolute;
+  color: #fff;
+  z-index: 100;
+  font-size: 2em;
+  top: auto;
+  background: #5cb85c;
+  padding: 10px;
+  width: auto;
+  margin-left: -48px;
+  display: none;
+}
+
+#lk-form-purchase-licences .form-checkboxes label:hover .glyphicon,
+#lk-form-purchase-licences .form-checkboxes label.checked .glyphicon {
+  display: block;
+}
+
+.vku_puchase_text {
+  width: 380px;
+  margin-left: 30px;
+}
+
+
+.contenthover {
+  padding: 20px 20px 10px;
+
+  a {
+    color: #000;
+
+    &.mybutton {
+      display: block;
+      float: left;
+      padding: 5px 10px;
+      background: #3c9632;
+      color: #fff;
+      border-radius: 4px;
+
+      &:hover {
+        background: #34742d;
+      }
+    }
+  }
+
+  h3,
+  p {
+    margin: 0 0 10px;
+    line-height: 1.4em;
+    padding: 0;
+  }
+}
+
+.showindicator {
+  background: #fff;
+  position: absolute;
+  z-index: 100;
+  opacity: .4;
+  width: 225px;
+  margin-top: 179px;
+  cursor: pointer;
+  color: #000;
+  padding: 5px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.active {
+    opacity: 1;
+    font-size: 1em;
+    background: transparent;
+    margin-left: 200px;
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+.contenthover2 {
+  position: absolute;
+  background: rgba(255, 255, 255, .85);
+  width: 225px;
+  height: 209px;
+
+  .list-kampa-options {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.list-kampa-options-big {
+  font-size: 1.7em;
+
+  .badge {
+    font-size: .7em;
+    padding: 10px;
+  }
+}
+
+.list-kampa-options {
+  .badge {
+    padding: 5px;
+    border-radius: 5px;
+    background: #999;
+  }
+
+  a {
+    color: #999;
+  }
+}
+
+.list_link .badge {
+  background: #f7a800;
+  font-size: 1.1em;
+
+  &:hover {
+    background: #357ebd;
+  }
+
+  a {
+    color: White;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+
+ul li.list_merkliste {
+  padding-left: 0;
+  padding-right: 15px;
+
+  &:hover a,
+  &.hover a {
+    color: #5cb85c;
+
+    .badge {
+      background: #5cb85c;
+    }
+  }
+}
+
+.list_vku:hover a,
+ .list_vku.hover a {
+  color: #f7a800;
+
+  .badge {
+    background: #f7a800;
+  }
+}
+
+.list_vku_disabled {
+  &:hover .badge {
+    background: #999;
+  }
+
+  a {
+    color: #999 !important;
+  }
+}
+
+#searchbegin {
+  width: 150px;
+}
+
+.kampa-related .col-md-9 {
+  border-left: 2px #d9dbda solid;
+}
+
+.show-tick.form-select {
+  border: 1px #ccc solid;
+  border-radius: 4px;
+}
+
+#privatemsg-new .filter-wrapper {
+  display: none;
+}
+
+#privatemsg-new .field-add-more-submit {
+  float: right;
+}
+
+.droppable-preview-image {
+  float: none;
+}
+
+#privatemsg-list-form .container-inline {
+  margin-bottom: 20px;
+}
+
+th.select-all {
+  width: 5%;
+}
+
+th.privatemsg-header-lastupdated {
+  width: 20%;
+}
+
+th.privatemsg-header-subject {
+  width: 40%;
+}
+
+.block-lokalkoenig-search-lk-search-other .current-search-item-active .btn {
+  box-shadow: none;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li.selected {
+  background: #eee;
+}
+
+.manualcrop-style-cropped {
+  color: #fff;
+}
+
+.btn.close {
+  opacity: 1;
+  text-shadow: none;
+  color: #fff;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: normal;
+}
+
+.view-id-sperrungen_kampagnen th.views-field-field-sid {
+  width: 10%;
+}
+
+.view-id-sperrungen_kampagnen th.views-field-title {
+  width: 20%;
+}
+
+.colorpicker input {
+  height: 20px;
+  top: 2px;
+}
+
+.panel-success a.list-group-item.active,
+.panel-success a.list-group-item.active:hover,
+.panel-success a.list-group-item.active:focus {
+  z-index: 2;
+  color: White;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+// Form Display
+.horizontal-tabs ul.horizontal-tabs-list li a {
+  text-transform: uppercase;
+  font-size: small;
+  padding: 10px !important;
+  padding-left: 20px;
+}
+
+fieldset.horizontal-tabs-pane {
+  box-shadow: none;
+}
+
+.field-widget-dragndrop-upload-image fieldset {
+  border: 0;
+  box-shadow: none;
+}
+
+.field-widget-dragndrop-upload-image .panel-heading {
+  padding: 0;
+  background: 0;
+  border: 0;
+}
+
+.field-widget-dragndrop-upload-image .panel-body {
+  padding: 0;
+}
+
+
+
+html.js input.form-autocomplete {
+  background-image: none !important;
+}
+
+.grid-under-image {
+  position: relative;
+
+  ul {
+    overflow: initial;
+  }
+
+  img {
+    position: relative;
+    z-index: 101;
+  }
+}
+
+span.k-desc {
+  max-width: 79px;
+}
+
+.multiple-formate {
+  position: relative;
+}
+
+.dev-query {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  right: 142px;
+  font-size: 9px;
+  background: #262626;
+  padding: 4.5px;
+  max-width: 315px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+// Download-Page
+body.page-download {
+  background: $blue;
+
+  #page #main {
+    float: none;
+    width: 600px;
+    margin: 50px auto;
+  }
+}

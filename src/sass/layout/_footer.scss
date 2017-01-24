@@ -1,0 +1,31 @@
+#footer {
+  padding-top: 0 !important;
+  background-color: #eee;
+}
+
+// Footer
+#block-menu-menu-men-unten .nav {
+  a {
+    display: inline-block;
+    color: #95a8af;
+    transition: background-color .5s, color .5s;
+
+    &:hover {
+      color: Black;
+    }
+  }
+
+  > li {
+    display: inline-block;
+  }
+}
+
+#block-block-5 {
+  color: #fff;
+  padding-top: 14px;
+
+  a.btn {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}

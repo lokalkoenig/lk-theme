@@ -1,0 +1,84 @@
+
+
+.region-header {
+  background: #ecf0f1;
+  padding: 10px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  width: 100.01%;
+
+  a {
+    color: White;
+  }
+
+  .page-header {
+    border-bottom: 0;
+    margin: 0;
+
+    h2 {
+      margin-top: 10px;
+      font-weight: bold;
+
+      small {
+        color: #fff;
+        font-weight: normal;
+        margin-left: 10px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.bg_1 {
+  background-image: url('#{$theme-folder}/headerbg/bg_1.jpg');
+}
+
+.bg_2 {
+  background-image: url('#{$theme-folder}/headerbg/bg_2.jpg');
+}
+
+.bg_3 {
+  background-image: url('#{$theme-folder}/headerbg/bg_3.jpg');
+}
+
+.bg_4 {
+  background-image: url('#{$theme-folder}/headerbg/bg_4.jpg');
+}
+
+.bg_5 {
+  background-image: url('#{$theme-folder}/headerbg/bg_5.jpg');
+}
+
+.bg_6 {
+  background-image: url('#{$theme-folder}/headerbg/bg_6.jpg');
+}
+
+.bg_7 {
+  background-image: url('#{$theme-folder}/headerbg/bg_7.jpg');
+}
+
+.bg_8 {
+  background-image: url('#{$theme-folder}/headerbg/bg_8.jpg');
+}
+
+header {
+  &.header {
+    background: $blue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .header_inner {
+    margin: 0 auto;
+    width: 1000px;
+  }
+
+  #logo {
+    display: block;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

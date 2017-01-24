@@ -1,0 +1,35 @@
+
+
+.well-neuigkeit {
+  h3 {
+    margin-top: 0;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .news-profile-picture {
+    img {
+      border: 1px #eee solid;
+      width: 50px;
+      height: auto;
+      margin-right: 20px;
+    }
+  }
+
+  .newspicture {
+    img {
+      width: 300px;
+      height: auto;
+    }
+  }
+
+  &.well-neuigkeit-teaser {
+    .newspicture {
+      margin-left: 20px;
+
+      img {
+        width: 150px;
+      }
+    }
+  }
+}

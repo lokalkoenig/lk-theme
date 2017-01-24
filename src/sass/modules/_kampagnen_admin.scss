@@ -1,0 +1,173 @@
+
+// CSS for Editing Campaigns
+.new-style-icon {
+  color: rgba(66, 139, 202, 1);
+  font-size: 1.5em;
+  vertical-align: middle;
+
+  a {
+    color: rgba(66, 139, 202, 1);
+
+    &:hover {
+      color: Silver;
+    }
+  }
+}
+
+.droppable-message {
+  clear: both;
+}
+
+.droppable {
+  float: none;
+  background: rgb(245, 245, 245);
+  border-radius: 4px;
+}
+
+.field-name-field-medium-varianten .file-size {
+  margin-bottom: 10px;
+}
+
+.field-name-field-medium-varianten .form-text {
+  width: 50%;
+}
+
+.field-name-field-medium-varianten .form-type-textfield {
+  margin-top: 20px;
+}
+
+.image-preview img {
+  border: 1px #428bca solid;
+}
+
+.thumbnail.thumbnail-blue {
+  padding: 0;
+  margin-right: 10px;
+  border-radius: 0;
+}
+
+.field-name-field-plz-sperre .input-group {
+  width: 50%;
+}
+
+.field-name-field-plz-sperre button.pull-right {
+  margin-top: -35px;
+}
+
+div.error,
+table tr.error {
+  background-color: transparent !important;
+}
+
+.alert.alert-help {
+  font-weight: bold;
+  background: #f5f5f5;
+  border: 1px #ddd solid;
+}
+
+div.addressfield-container-inline > div.form-item {
+  float: none !important;
+  margin-right: 0 !important;
+}
+
+.ac_results {
+  padding: 5px;
+  border: 1px solid #00008b;
+  background-color: #fff;
+  overflow: inherit;
+  z-index: 1000;
+
+  &::before {
+    position: absolute;
+    content: 'Suchvorschl\00e4ge';
+    background: #eee;
+    color: #000;
+    margin-left: 153px;
+    z-index: 300;
+    margin-top: -40px;
+    padding: 7px;
+  }
+
+  li {
+    padding: 3px 6px;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+
+    &:first-child {
+      .apachesolr_autocomplete.message::before {
+        content: 'ca. ';
+        display: inline;
+      }
+    }
+
+    strong {
+      text-decoration: underline;
+    }
+  }
+}
+
+.apachesolr_autocomplete.message {
+  font-size: 90%;
+  color: inherit;
+}
+
+.ac_over {
+  background-color: $blue;
+  color: #fff;
+}
+
+// @todo- check if this is in use
+.suche-in-msg {
+  .pagination {
+    display: none;
+  }
+
+  .view-content {
+    width: 490px;
+    margin: 0 auto;
+  }
+}
+
+html.js input.form-autocomplete#searchbegin {
+  background-position: 240px 10px;
+}
+
+.k-desc {
+  font-size: 9px;
+  max-width: 75px;
+  display: inline-block;
+  line-height: 10px;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+.grid-under-image {
+  padding: 5px;
+
+  ul {
+    margin-bottom: 0;
+    height: 24px;
+    overflow: hidden;
+  }
+}
+
+.thumbnail.newspicture {
+  margin-left: 20px;
+}
+
+.special-tab {
+  a {
+    background-color: rgba(66, 139, 202, .5) !important;
+    text-transform: uppercase;
+    color: #fff !important;
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  &.active a,
+  a:hover {
+    background-color: rgba(66, 139, 202, 1) !important;
+    color: #fff !important;
+  }
+}

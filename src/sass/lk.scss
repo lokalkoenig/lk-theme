@@ -1,82 +1,22 @@
+@import 'variables';
 
-$theme-folder: '/sites/all/themes/bootstrap_lk';
+// components
+@import 'components/typo';
+@import 'components/buttons';
+@import 'components/tooltip';
+@import 'components/tabs';
 
-@import "modules/_search.scss";
-@import "_addkampagne.scss";
-@import "_static.scss";
-@import "_style.scss";
+// misc components
+@import 'modules/all';
 
-// Download-Page
-body.page-download {
-  background: #34495e;
-  
-  #page #main {
-    width: 100%;
-    float: none;
-    width: 600px;
-    margin: 50px auto;
-  }
-}
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/front';
 
-
-.link-group {
-    display: inline-block;
-    position: relative;
-    background:transparent;
-    transition: min-width 200ms linear;
-    min-width: 150px;
-    z-index: 1;
-    
-   .items {
-      height: 1px;
-      border-top: 1px transparent solid;
-      opacity: 0;
-      left: 0;
-      right: 0;
-      position: absolute;
-      overflow: hidden;
-      transition: opacity 400ms linear;
-      top: 27px;
-      z-index: 2;
-      
-      .btn {
-        border: 0;
-        text-align: left;
-        padding: 5px 10px;
-      }
-   }
-  
-  &.link-group-growing {
-    &:hover {
-      min-width: 200px;
-      
-      > .btn {
-        padding-left: 10px;
-        text-align: left;
-      }
-    }
-  }
-   
-  &:hover {
-    z-index: 3;
-    
-    .items {
-      height: auto;
-      opacity: 1;
-      background: White;
-      border: 1px silver solid;
-      border-top: 0;
-    }    
-  }
-}
-   
-
-.well {
-  &.well-white {
-   background: white;
-  }
-  
-  >h4 {
-    margin-top: 0;
-  }  
-}
+// Modules
+@import 'modules/search';
+@import 'modules/kampagnen_admin';
+@import 'modules/kampagnen_view';
+@import 'modules/static-pages';
+@import 'modules/neuigkeit';

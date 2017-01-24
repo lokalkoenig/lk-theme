@@ -1,0 +1,38 @@
+// Startseite
+.front {
+  .region-header,
+  .region-highlighted {
+    display: none;
+  }
+
+  #footer {
+    margin-top: 0;
+  }
+
+  #wrap {
+    background: url(#{$theme-folder}/design/front_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #014783;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+
+  header.header {
+    box-shadow: 2px 2px 5px #2c3e50;
+    padding: 0;
+  }
+
+  #page {
+    width: auto;
+  }
+}
+
+.extra-box {
+  background: url('#{$theme-folder}/design/start-extra-box.jpg');
+  background-repeat: no-repeat;
+  padding-top: 35px;
+  padding-bottom: 45px;
+  background-position: center;
+  background-color: #faf7f5;
+}
