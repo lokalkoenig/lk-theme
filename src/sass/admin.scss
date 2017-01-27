@@ -1,0 +1,194 @@
+
+@import 'variables';
+
+body #page,
+body .width {
+  width: 100%;
+  min-width: auto;
+  margin: 0;
+}
+
+body header {
+  position: absolute;
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+
+body header .header_inner {
+  width: auto;
+  margin: 10px 20px;
+
+  h1 {
+    display: block;
+    vertical-align: middle;
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 36px;
+    text-align: center;
+  }
+}
+
+body .inner_section {
+  width: auto;
+  margin-left: 260px;
+}
+
+body {
+  .region-header {
+    background: $blue;
+    min-height: 110px;
+  }
+}
+
+.region.region-highlighted {
+  display: none;
+}
+
+body .sidebars {
+  position: absolute;
+  width: 17.5em;
+  padding: 20px 0;
+
+  .block-title {
+    padding: 5px 20px 10px;
+  }
+
+  .nav > li > a {
+    padding: 8px 10px;
+    border: 1px #eee solid;
+    border-radius: 4px;
+    margin: 1px 10px;
+    font-weight: bold;
+    
+    &:hover,
+    &.active-trail,
+    &.active {
+      background: #ecf0f1;
+    }
+  }
+
+}
+
+body #page #main {
+  width: calc(100% - 17.5em);
+  margin-left: 17.5em;
+
+  > #content {
+    background: White;
+    min-height: 500px;
+    padding: 15px;
+  }
+}
+
+body #wrap {
+  background: #fff;
+  padding-bottom: 0;
+}
+
+
+
+.region-top {
+    display: none;
+}
+
+.list-admin, .list-admin ul {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+        margin-bottom: 15px;
+        margin-right: 15px;
+    }
+
+    .list-admin ul  {
+        margin: 0;
+    }
+
+
+
+    ul.list-admin>li {
+        border: none;
+        margin-bottom: 15px;
+
+
+    }
+
+    ul.list-admin>li>a {
+       border-bottom: 1px #34495e solid;
+       font-weight: bold;
+       background: rgba(255,255,255,0.7);
+    }
+
+
+    .list-admin a {
+
+        display: block;
+        padding: 5px 10px;
+
+    }
+    .list-admin a.active {
+        background: #34495e;
+        color: White;
+    }
+
+    
+    .view-footer {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    table th {
+        transition: background 0.4s ease-in-out;
+    }
+
+    table th img {
+        margin-left: 5px;
+    }
+
+    table.sticky-header th {
+        padding: 5px;
+        background: #34495e;
+        color: White;
+
+    }
+
+    table.sticky-header th a {
+        color: White;
+    }
+
+    .form-type-select.form-item-operation {
+        margin-left: 10px;
+    }
+
+body .dev-query {
+  right: auto;
+}
+
+.flexbox {
+  display: flex;
+  flex-flow: row wrap;
+
+  .flexitem {
+    flex: 1;
+    flex-basis: 45%;
+    margin: 5px;
+    padding: 15px;
+
+    &.smaller {
+      flex-basis: 30%;
+    }
+
+    .well {
+      border: 0;
+      box-shadow: none;
+      padding: 0;
+    }
+
+   .panel-info, .panel-body {
+      border: 0;
+      padding: 0;
+   }
+  }
+}

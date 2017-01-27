@@ -77,9 +77,17 @@ gulp.task('sass', () =>
     .pipe(gulp.dest('src/css/'))
 );
 
+gulp.task('sass:admin', () =>
+  sass('src/sass/admin.scss')
+  .pipe(sassUnicode())
+  .on('error', sass.logError)
+  .pipe(gulp.dest('./dist/'))
+);
+
 gulp.task('watch', function() {
   gulp.watch('src/js/*.js', ['scripts']);
-  gulp.watch(['src/sass/*.scss', 'src/sass/*/*.scss'], ['scss-lint', 'sass', 'css', 'css']);
+  gulp.watch(['src/sass/admin.scss'], ['sass:admin']);
+  gulp.watch(['src/sass/lk.scss','src/sass/_variables.scss','src/sass/*/*.scss'], ['scss-lint', 'sass', 'css', 'css']);
 });
 
 
