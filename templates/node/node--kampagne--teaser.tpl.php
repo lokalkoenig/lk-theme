@@ -20,7 +20,7 @@
       
       <?php
         foreach($node -> basic_links as $link):
-            $options = array('html' => true, "attributes" => (array)$link["attributes"]);
+            $options = array('html' => true, "attributes" => $link["attributes"]);
             print '<li class="pull-right">'. l($link["title"], $link["href"], $options) .'</li>';
         endforeach;
      ?> 
