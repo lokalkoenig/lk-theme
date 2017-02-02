@@ -4,11 +4,6 @@
 
 $ = jQuery;
 
-function closeSearchHelp(){
-  $('.showtext').hide(500, 'swing');
-  $( "#searchbegin" ).removeClass('open').animate({ width: "150px"}, 300);
-}
-
 function lk_add_js_notfication(msg, scrollto){
   var msg_html = '<div class="width alert js-alert alert-success fade in" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>' + msg +'</div>';
   $('.js-alert').remove();
@@ -88,18 +83,8 @@ function activetePreview(id, fileid){
 }
 
 (function($) {
+  
   $(document).ready(function(){
-
-    // Search-Bar
-    $("#searchbegin:not(.open)").focus(function(){
-        $('#searchbegin').addClass('open');
-
-        $("#searchbegin").animate({
-            width: "+=150"}, 300, function() {
-            $('.showtext').show(500, 'swing');
-        });
-    });
-
     // @todo - if this still available
     if($('#edit-field-team-verkaufsleiter-und').length){
       $('#edit-field-team-verkaufsleiter-und').selectpicker();

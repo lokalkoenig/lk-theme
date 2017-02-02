@@ -87,7 +87,7 @@ gulp.task('sass:admin', () =>
 gulp.task('watch', function() {
   gulp.watch('src/js/*.js', ['scripts']);
   gulp.watch(['src/sass/admin.scss'], ['sass:admin']);
-  gulp.watch(['src/sass/lk.scss','src/sass/_variables.scss','src/sass/*/*.scss'], ['scss-lint', 'sass', 'css', 'css']);
+  gulp.watch(['src/sass/lk.scss','src/sass/_variables.scss','src/sass/*/*.scss'], ['sass', 'css', 'css']);
 });
 
 
