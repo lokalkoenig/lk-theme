@@ -803,21 +803,6 @@ fieldset.horizontal-tabs-pane {
   box-shadow: none;
 }
 
-.field-widget-dragndrop-upload-image fieldset {
-  border: 0;
-  box-shadow: none;
-}
-
-.field-widget-dragndrop-upload-image .panel-heading {
-  padding: 0;
-  background: 0;
-  border: 0;
-}
-
-.field-widget-dragndrop-upload-image .panel-body {
-  padding: 0;
-}
-
 .grid-under-image {
   position: relative;
 
@@ -861,4 +846,14 @@ body.page-download {
     width: 600px;
     margin: 50px auto;
   }
+}
+
+.admin-menu-search {
+  .control-label {
+    display: none;
+  }
+}
+
+.manualcrop-style-cropped {
+  color: #000;
 }

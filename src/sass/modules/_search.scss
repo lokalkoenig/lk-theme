@@ -1,4 +1,19 @@
 
+#kampasearch {
+  .btn-suche {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 35px;
+    top: -1px;
+    position: relative;
+  }
+
+  #searchbegin {
+    display:inline;
+    margin-right: -10px;
+  }
+}
+
 .search_tabs {
   border-bottom: 2px #d7dcde solid;
   height: 44px;
@@ -203,7 +218,7 @@ h2.block-title {
   }
 
   li {
-    &::after {
+    &:not(:last-child)::after {
       content: '+';
       padding: 4px 6px;
       float: right;

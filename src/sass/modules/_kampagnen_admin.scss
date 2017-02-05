@@ -137,7 +137,6 @@ html.js input.form-autocomplete#searchbegin {
   ul {
     margin-bottom: 0;
     height: 24px;
-    overflow: hidden;
   }
 }
 
@@ -158,5 +157,81 @@ html.js input.form-autocomplete#searchbegin {
   a:hover {
     background-color: rgba(66, 139, 202, 1) !important;
     color: #fff !important;
+  }
+}
+
+.node-form {
+  select.shs-select {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    margin-right: 20px;
+  }
+
+  span.autocomplete-deluxe-item {
+    padding: 10px 20px;
+    background-position: center;
+    padding-right: 25px;
+    background: White;
+    float: none;
+    display: block;
+    font-size: 1em;
+    line-height: 1.4em;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+
+  a.autocomplete-deluxe-item-delete {
+    top: 14px;
+    font-size: inherit;
+    right: 10px;
+    filter: grayscale(1);
+    background-repeat: no-repeat;
+
+    &:hover {
+      filter: grayscale(.5);
+    }
+  }
+
+  div>div.autocomplete-deluxe-container input.autocomplete-deluxe-form {
+    width: 80%;
+  }
+
+  div div.autocomplete-deluxe-multiple {
+    width: 100%;
+  }
+
+  div.autocomplete-deluxe-throbber  {
+    margin-top: 6px;
+    right: 9px;
+    filter: grayscale(.5);
+    position: relative;
+  }
+}
+
+.ui-autocomplete {
+  .autocomplete-deluxe-highlight-char {
+    color: #020e9e;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  a.ui-state-hover {
+    background: #428bca;
+
+    span.autocomplete-deluxe-highlight-char  {
+      color: White;
+    }
   }
 }

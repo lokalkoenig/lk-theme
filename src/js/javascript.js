@@ -1,7 +1,6 @@
 ///
 /// LK - Theme JS
 ///
-
 $ = jQuery;
 
 function lk_add_js_notfication(msg, scrollto){

@@ -22,10 +22,13 @@ regions[bottom]         = Page bottom
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = dist/bootstrap/css/bootstrap.css
+//stylesheets[all][] = dist/bootstrap/css/bootstrap.css
+//stylesheets[all][] = ../bootstrap/css/overrides.css
+stylesheets[all][] = dist/modules.css
 stylesheets[all][] = dist/lk.css
+
 scripts[] = dist/javascript.js
-scripts[] = dist/bootstrap/js/bootstrap.js
+//scripts[] = dist/bootstrap/js/bootstrap.js
 
 
 ; For information on choosing the desired method, please read the Drupal
@@ -41,5 +44,5 @@ scripts[] = dist/bootstrap/js/bootstrap.js
 ; ;;;;;;;;;;;;;;;;;;;;;
 
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
-settings[bootstrap_cdn] = ''
+; ; settings[bootstrap_cdn] = ''
 

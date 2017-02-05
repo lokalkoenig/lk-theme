@@ -26,9 +26,8 @@ gulp.task('css', function () {
   return gulp.src([
     'node_modules/bootstrap-multiselect/dist/css/bootstrap-multiselect.css',
     'node_modules/bootstrap-select/dist/css/bootstrap-select.css',
-    'src/css/lk.css'
    ])
-    .pipe(concatCss("lk.css", {rebaseUrls: false}))
+    .pipe(concatCss("modules.css", {rebaseUrls: false}))
     .pipe(sassUnicode())
     .pipe(cleanCSS({compatibility: 'ie8', keepBreaks: true, 'rebase': false, debug: true}, function(details) {
       console.log(details.name + ': ' + details.stats.originalSize);
@@ -43,7 +42,7 @@ gulp.task('scripts', function() {
     'node_modules/bootstrap-select/dist/js/bootstrap-select.js',
     'node_modules/bootstrap-select/dist/js/i18n/defaults-de_DE.js',
     'node_modules/jquery.scrollto/jquery.scrollTo.js',
-    'src/js/bootstrap.modal.js',
+    //'src/js/bootstrap.modal.js',
     'src/js/javascript.js',
     'src/js/vku-1.js'
   ])
@@ -72,9 +71,12 @@ gulp.task('scss-lint', function() {
 
 gulp.task('sass', () =>
     sass('src/sass/lk.scss')
-    .pipe(sassUnicode())
-    .on('error', sass.logError)
-    .pipe(gulp.dest('src/css/'))
+    .pipe(sassUnicode()).on('error', sass.logError)
+    .pipe(cleanCSS({compatibility: 'ie8', keepBreaks: true, 'rebase': false, debug: true}, function(details) {
+      console.log(details.name + ': ' + details.stats.originalSize);
+      console.log(details.name + ': ' + details.stats.minifiedSize);
+     }))
+    .pipe(gulp.dest('./dist/'))
 );
 
 gulp.task('sass:admin', () =>
@@ -87,7 +89,7 @@ gulp.task('sass:admin', () =>
 gulp.task('watch', function() {
   gulp.watch('src/js/*.js', ['scripts']);
   gulp.watch(['src/sass/admin.scss'], ['sass:admin']);
-  gulp.watch(['src/sass/lk.scss','src/sass/_variables.scss','src/sass/*/*.scss'], ['sass', 'css', 'css']);
+  gulp.watch(['src/sass/lk.scss','src/sass/_variables.scss','src/sass/*/*.scss'], ['sass', 'css']);
 });
 
 

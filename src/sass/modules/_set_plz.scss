@@ -1,0 +1,49 @@
+
+#telefonmitarbeiter-set-plz .well {
+  padding: 10px 20px;
+
+  span {
+    opacity: 0;
+    transition: opacity .4s;
+    display: block;
+    font-size: 2em;
+    color: rgb(52, 73, 94);
+    position: relative;
+    top: 0.2em;
+  }
+}
+
+#telefonmitarbeiter-set-plz {
+  input[type=checkbox] {
+    display: none;
+  }
+
+  .form-item-take {
+    > label {
+      margin-bottom: 10px;
+    }
+  }
+
+  .form-type-checkbox>label {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    display: block;
+    padding-left: 0;
+    color: $blue;
+  }
+}
+
+#telefonmitarbeiter-set-plz .form-type-checkbox {
+    padding-left: 0;
+}
+
+#telefonmitarbeiter-set-plz input[type=checkbox]:checked {
+  + .well {
+    border-color: #34495e;
+
+    span {
+      opacity: 1;
+    }
+  }
+}
+
