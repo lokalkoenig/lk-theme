@@ -47,6 +47,23 @@
 }
 
 
+#presentation-big-images {
+  width: 100%;
+
+  > div {
+    margin: 0 auto;
+  }
+
+  .modal-header {
+    background: White;
+    border-radius: 0;
+
+    h3 {
+      color: #34495e;
+    }
+  }
+}
+
 .preview_container {
   overflow-y: auto;
   overflow-x: hidden;
@@ -64,6 +81,8 @@
 
       img {
         border: 10px Silver dotted;
+        display: inline-block;
+        max-width: 90%;
       }
     }
   }
