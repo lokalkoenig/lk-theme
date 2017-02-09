@@ -6,13 +6,15 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728148
  */
+global $user;
+
 ?>
 
 <div id="wrap2">
   <div id="wrap" style="min-height: 550px;">
     <header class="header clearfix" id="header" role="banner">
       <div class="header_inner">
-        <a href="<?= url('backoffice'); ?>"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+        <a href="<?= url('user/' . $user -> uid . "/dashboard"); ?>"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
         <h1>Backoffice</h1>
        </div>
 
