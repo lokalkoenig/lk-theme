@@ -166,9 +166,11 @@ function activetePreview(id, fileid){
       $(this).html('<span class="glyphicon glyphicon-trash"></span> ' + $(this).html());
     });
 
-    $('.showindicator').click(function(){
-      var el = this;
 
+    
+    $('body').on('click', '.showindicator', function(){
+      var el = this;
+     
       $(this).parent('.tgrid').children('.contenthover2').slideToggle(400,
         function(){
           if($(el).hasClass('active')){

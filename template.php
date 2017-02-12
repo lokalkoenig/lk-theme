@@ -2,6 +2,7 @@
 
 include_once __DIR__ . '/functions/user.php';
 include_once __DIR__ . '/functions/pmsg.php';
+include_once __DIR__ . '/functions/messages.php';
 
 function bootstrap_lk_preprocess_page(&$vars) { 
   //dpm($vars);
