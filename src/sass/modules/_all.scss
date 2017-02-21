@@ -355,10 +355,19 @@ input.add-to-dropbox {
   background-color: #f5f5f5;
 }
 
-.panel-default > .panel-heading {
+fieldset .panel-heading {
   color: inherit;
   background-color: #f5f5f5;
   font-weight: bold;
+  float: none;
+
+  > a.panel-title {
+    margin: 0 -15px;
+    padding: 5px 15px;
+    margin-bottom: -10px;
+    padding-bottom: 15px;
+    color: $blue;
+  }
 }
 
 .panel-title {
