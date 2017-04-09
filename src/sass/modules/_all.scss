@@ -355,17 +355,18 @@ input.add-to-dropbox {
   background-color: #f5f5f5;
 }
 
-fieldset .panel-heading {
-  color: inherit;
+fieldset legend.panel-heading {
+  width: calc(100% + 2px);
+  left: -1px;
+  position: relative;
   background-color: #f5f5f5;
   font-weight: bold;
   float: none;
+  display: block;
 
   > a.panel-title {
-    margin: 0 -15px;
-    padding: 5px 15px;
-    margin-bottom: -10px;
-    padding-bottom: 15px;
+    margin: 0;
+    padding: 0;
     color: $blue;
   }
 }
@@ -865,4 +866,15 @@ body.page-download {
 
 .manualcrop-style-cropped {
   color: #000;
+}
+
+.block-lokalkoenig-user .list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
+
+.region-sidebar-first .panel-heading {
+  background-color: rgba(66, 139, 202, .5) !important;
+  text-transform: uppercase;
+  color: #fff;
 }

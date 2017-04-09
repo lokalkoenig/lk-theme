@@ -29,18 +29,24 @@
 
 $vorlagen = vkuconnection_get_user_templates(arg(1));
 // vku_status_2=1
-$links = array(
-   '1' =>  '<span class="glyphicon glyphicon-cloud-download"></span> Aktuelle Verkaufunterlagen',
-   '2' => '<span class="glyphicon glyphicon-euro"></span> Lizenzen',
-   '3' => '<span class="glyphicon glyphicon-list"></span> Lizenz-Archiv',
-   '4' => '<span class="glyphicon glyphicon-trash"></span> Papierkorb' 
-);
-
-
-
-
-
 $uid = arg(1);
+
+if(\LK\get_user($uid)->isLKTestverlag()) {
+  $links = array(
+     '1' =>  '<span class="glyphicon glyphicon-cloud-download"></span> Aktuelle Verkaufunterlagen',
+     '4' => '<span class="glyphicon glyphicon-trash"></span> Papierkorb'
+  );
+}
+else {
+  $links = array(
+     '1' =>  '<span class="glyphicon glyphicon-cloud-download"></span> Aktuelle Verkaufunterlagen',
+     '2' => '<span class="glyphicon glyphicon-euro"></span> Lizenzen',
+     '3' => '<span class="glyphicon glyphicon-list"></span> Lizenz-Archiv',
+     '4' => '<span class="glyphicon glyphicon-trash"></span> Papierkorb'
+  );
+}
+
+
 $active = 1;
 
 if(isset($_GET["vku_status_2"])){
@@ -52,23 +58,6 @@ if(isset($_GET["vku_status_2"])){
 
  lk_set_subtitle($links[$active]);
 ?>
-
-<style>
-  .view-filters-no-style .panel-body, .view-filters-no-style .panel-default {
-     padding:0; 
-     border: 0;
-     display: none;
-  }
-  
-  .view-filters-no-style  label {
-    display: none;
-  }
-  .view-filters-no-style .views-exposed-form .views-exposed-widget .form-submit {
-    margin-top: 0;
-  }
-
-</style>
-
 
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
@@ -98,17 +87,9 @@ if(isset($_GET["vku_status_2"])){
               <?php endif; ?>   
             </ul>
           </div>   
-            
-            
-            
             </li> 
         <li><a class="btn btn-sm btn-success" href="<?php print url("user/" . arg(1) . "/vkusettings"); ?>"><span class="glyphicon glyphicon-cog"></span> Einstellungen</span></a></li> 
-   
      </ul>
-    
-     <div class="view-filters view-filters-no-style">
-      <?php print $exposed; ?>
-    </div> 
   </div>
 
 

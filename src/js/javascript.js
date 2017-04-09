@@ -89,6 +89,10 @@ function activetePreview(id, fileid){
       $('#edit-field-team-verkaufsleiter-und').selectpicker();
     }
 
+    $('.form-select-all').click(function(){
+       $(this).select();
+    });
+
     // recomend node
     $('a.recomendnode').click(function(){
       lk_add_js_modal_optin('Kampagne versenden', '...Laden', '', '');
