@@ -1,0 +1,51 @@
+/// Masquerade Plugin
+
+body.admin-menu {
+  .block-masquerade {
+    top: 10px;
+  }
+}
+
+.block-masquerade {
+  position: fixed;
+  top: -7px;
+  transform: scale(0.8);
+  width: 300px;
+  margin: 0;
+  padding: 0 !important;
+  left: -32px;
+
+  h2 {
+    margin: 0;
+    display: none;
+  }
+
+  form.panel {
+    background: rgba(52, 73, 94, 0.8);
+    color: White;
+    border: 1px White solid;
+
+    .panel-body {
+      padding: 7px 15px;
+    }
+
+    // switch Back Link
+    .description a {
+      color: white;
+    }
+  }
+
+  .form-item {
+    clear: both;
+  }
+
+  input.form-control {
+    width: 80%;
+  }
+
+  .input-group-addon {
+    display: none;
+  }
+
+}
+

@@ -31,28 +31,17 @@ $vorlagen = vkuconnection_get_user_templates(arg(1));
 // vku_status_2=1
 $uid = arg(1);
 
-if(\LK\get_user($uid)->isLKTestverlag()) {
-  $links = array(
-     '1' =>  '<span class="glyphicon glyphicon-cloud-download"></span> Aktuelle Verkaufunterlagen',
-     '4' => '<span class="glyphicon glyphicon-trash"></span> Papierkorb'
-  );
-}
-else {
-  $links = array(
-     '1' =>  '<span class="glyphicon glyphicon-cloud-download"></span> Aktuelle Verkaufunterlagen',
-     '2' => '<span class="glyphicon glyphicon-euro"></span> Lizenzen',
-     '3' => '<span class="glyphicon glyphicon-list"></span> Lizenz-Archiv',
-     '4' => '<span class="glyphicon glyphicon-trash"></span> Papierkorb'
-  );
-}
-
+$links = array(
+  '1' =>  '<span class="glyphicon glyphicon-cloud-download"></span> Aktuelle Verkaufunterlagen',
+  '4' => '<span class="glyphicon glyphicon-trash"></span> Papierkorb',
+);
 
 $active = 1;
 
 if(isset($_GET["vku_status_2"])){
     $test = (int)$_GET["vku_status_2"];  
     if(isset($links[$test])){
-        $active = $test;
+      $active = $test;
     }
 }
 
