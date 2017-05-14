@@ -329,3 +329,36 @@ function bootstrap_lk_facetapi_link_active($variables) {
   //dpm($variables);         
   return theme_link($variables);
 }
+
+
+function bootstrap_lk_form_horizontal(&$form) {
+  $form['#attributes']['class'][] = 'form-horizontal';
+  _bootstrap_lk_form_horizontal_add_classes($form);
+
+  return $form;
+}
+
+function _bootstrap_lk_form_horizontal_add_classes(&$form) {
+  while(list($key, $val) = each($form)) {
+
+    if(is_array($val)) {
+      _bootstrap_lk_form_horizontal_add_classes($form[$key]);
+    }
+
+    if(is_array($val) && (isset($val['#title']) || isset($val['#field_name']))) {
+
+      if(isset($val['#field_name']) && $val['#field_name'] === 'password_confirm') {
+        continue;
+      }
+     
+      $form[$key]['#field_prefix'] = '<div class="col-sm-10">';
+
+      if(isset($form[$key]['#field_suffix'])) {
+        $form[$key]['#field_suffix'] .= '</div>';
+      } else {
+        $form[$key]['#field_suffix'] = '</div>';
+      }
+    }
+  }
+}
+

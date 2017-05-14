@@ -1,0 +1,84 @@
+
+.form-horizontal {
+
+  .image-preview img {
+    border: 0;
+  }
+
+  .field-name-field-plz-sperre button.pull-right {
+    margin-top: -32px;
+    position: relative;
+    left: 10px;
+  }
+
+  .help-block {
+    background: transparent;
+  }
+
+  .help-block.password-help:empty {
+    display: none;
+  }
+
+  .form-type-password-confirm {
+    padding: 10px 15px;
+    margin: 15px;
+    border: 1px #eee solid;
+    padding-left: 16.66666667%;
+    border-radius: 3px;
+
+    &>.control-label {
+      display: none;
+    }
+
+    &>.col-sm-10 {
+      width: 100%;
+      float: none;
+      padding: 0;
+
+      .col-md-4 {
+        width: 50%;
+      }
+    }
+
+    .row {
+      position: relative;
+    }
+
+  }
+
+  .help-block.password-help {
+    border: 1px #eee solid;
+    left: 50%;
+
+    ul {
+      list-style-type: square;
+      padding-left: 1em;
+    }
+  }
+
+  .form-type-password {
+    label.control-label {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+ .form-group label {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .street-block {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .col-sm-10 {
+    + .help-block {
+      margin-left: 19%;
+    }
+  }
+
+}
